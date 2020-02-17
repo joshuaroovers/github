@@ -1,0 +1,41 @@
+body
+{
+    background-color: whitesmoke;
+}
+a
+{
+    color: unset;
+    text-decoration: none;
+    background-color: gray;
+    border: gray 1px solid;
+    padding: 3px;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#maincontainer
+{
+    background-color: white;
+    width: 70%;
+    margin-left: 15%;
+    border: rgb(58, 58, 58) 1px solid;
+}
+#header
+{
+    text-align: center;
+    padding: 15px;
+    
+}
+#filler
+{
+    padding: 20px;
+    border-bottom: gray 2px solid;
+    border-top: gray 2px solid;
+}
+#footer
+{
+    text-align: center;
+    padding: 20px;
+    color: rgb(82, 82, 82);
+}
