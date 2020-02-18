@@ -14,8 +14,12 @@
                 <a class = "curentpage"  href = "./onkunde.php">Onkunde</a>
             </div>
             <div id = "content">
+                <div>
+                    dlafkga,sfhaslbdfaks
+                </div>
+                 
                 <?php 
-                    
+
                 ?>
             </div>
             <div id = "footer">

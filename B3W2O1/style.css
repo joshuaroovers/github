@@ -27,6 +27,11 @@ img
     padding-top: 20px;
     padding-bottom: 20px;
 }
+#content
+{
+    padding: 20px;
+    padding-top: 30px;
+}
 #footer
 {
     height: 50px;
