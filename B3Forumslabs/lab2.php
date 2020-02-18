@@ -14,7 +14,6 @@
             ini_set('display_errors', 0);
            
             $name = $_POST["name"];
-            echo($name);
             $nameA = str_split($name);
 
             $mail = $_POST["mail"];
