@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE = html>
 <html lang = "nl">
 
@@ -10,10 +6,11 @@
 
     <body>
 
+        
 
         <?php
 
-            include "welcome.html";
+           include "lab1.html";
 
 
             echo $_POST["name"];

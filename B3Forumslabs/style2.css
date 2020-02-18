@@ -1,0 +1,19 @@
+form
+{
+    margin-top: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+#submit
+{
+    margin-top: 3px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+span
+{
+    display: inline-block;
+}
