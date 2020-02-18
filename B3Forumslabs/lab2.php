@@ -19,22 +19,25 @@
             $mail = $_POST["mail"];
             $mailA = str_split($mail);
 
-            if(count($nameA) == 1 && $aag == 1)
+            if(isset($_POST["submit"])) #dis be here because it should change the variable before it uses it
             {
-                $requieredname = "* Name Requiered";
-            }
-            else
-            {
-                $requieredname = "*"; 
-            }
+                if(count($nameA) == 1)
+                {
+                    $requieredname = "* Name Requiered"; #this variable
+                }
+                else
+                {
+                    $requieredname = "*"; 
+                }
 
-            if(count($mailA) == 1 && $aag == 1)
-            {
-                $requieredmail = "* Email Requiered";
-            }
-            elseif(!filter_var($mail, FILTER_VALIDATE_EMAIL) && $mail != null)//checks for @ and an .(country) *.nl*
-            {
-                $requieredmail = "* Valid Email Requiered";
+                if(count($mailA) == 1)
+                {
+                    $requieredmail = "* Email Requiered";
+                }
+                elseif(!filter_var($mail, FILTER_VALIDATE_EMAIL) && $mail != null)#checks for @ and an .(country) *.nl*
+                {
+                    $requieredmail = "* Valid Email Requiered";
+                }
             }
         ?>
 
@@ -46,21 +49,16 @@
             <input type="text" name="mail">
             <span style = "color: red"><?php echo($requieredmail) ?></span>
             <br>
-            <input id = "submit" type="submit" value="Submit">
+            <input id = "submit" name = "submit" type="submit" value="Submit">
         </form>
 
         <?php
-
-            if(count($nameA) != 1 && count($mailA) != 1 && filter_var($mail, FILTER_VALIDATE_EMAIL))
-            {
-                echo("<script>document.getElementById(\"form\").remove() </script>");
-                echo ("Your name is: " . $_POST["name"] . "<br>");
-                echo ("Your Email is: " . $_POST["mail"]);
-            }
-            else {
-                $aag = 1;
-            }
-
+             if(count($nameA) != 1 && count($mailA) != 1 && filter_var($mail, FILTER_VALIDATE_EMAIL)) #needs to be here because the element has to exist for it to check for it
+             {
+                 echo("<script>document.getElementById(\"form\").remove() </script>");
+                 echo ("Your name is: " . $_POST["name"] . "<br>");
+                 echo ("Your Email is: " . $_POST["mail"]);
+             }
         ?>
 
     </body>
