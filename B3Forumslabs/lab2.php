@@ -12,14 +12,14 @@
             $requieredmail = "*";
             
             ini_set('display_errors', 0);
-
+           
             $name = $_POST["name"];
             $nameA = str_split($name);
 
             $mail = $_POST["mail"];
             $mailA = str_split($mail);
 
-            if(count($nameA) == 1 || $name == null)
+            if(count($nameA) == 1 && $aag == 1)
             {
                 $requieredname = "* Name Requiered";
             }
@@ -28,11 +28,11 @@
                 $requieredname = "*"; 
             }
 
-            if(count($mailA) == 1 || $mail == null)
+            if(count($mailA) == 1 && $aag == 1)
             {
                 $requieredmail = "* Email Requiered";
             }
-            elseif(!filter_var($mail, FILTER_VALIDATE_EMAIL) || $mail == null)//checks for @ and an .(country) *.nl*
+            elseif(!filter_var($mail, FILTER_VALIDATE_EMAIL) && $mail != null)//checks for @ and an .(country) *.nl*
             {
                 $requieredmail = "* Valid Email Requiered";
             }
@@ -50,13 +50,17 @@
         </form>
 
         <?php
+
             if(count($nameA) != 1 && count($mailA) != 1 && filter_var($mail, FILTER_VALIDATE_EMAIL))
             {
                 echo("<script>document.getElementById(\"form\").remove() </script>");
                 echo ("Your name is: " . $_POST["name"] . "<br>");
                 echo ("Your Email is: " . $_POST["mail"]);
-
             }
+            else {
+                $aag = 1;
+            }
+
         ?>
 
     </body>
