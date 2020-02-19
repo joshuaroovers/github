@@ -11,7 +11,7 @@
         <?php
 
             ini_set('display_errors', 0);
-            
+
         ?>
         
 
@@ -34,7 +34,7 @@
                         <div class = "question">Als je 100.000.- euro had wat zou je dan kopen</div>
                         <div class = "question">Wat is je favoriete bezigheid?</div>
                     </div>
-                    <form id = "awnsers" action = "paniek.php" method = "POST">
+                    <form id = "awnsers" action = "paniek.php" method = "POST" autocomplete = "off">
                         <input id = "P1" type = "text" name = "P1" value = <?php echo($_POST["P1"]); ?>>
                         <input id = "P2" type = "text" name = "P2" value = <?php echo($_POST["P2"]); ?>>
                         <input id = "P3" type = "text" name = "P3" value = <?php echo($_POST["P3"]); ?>> 
@@ -64,42 +64,42 @@
                         
                         if(count($P1A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P1\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P1\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P1"] = "";
                         }
                         if(count($P2A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P2\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P2\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P2"] = "";
                         }
                         if(count($P3A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P3\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P3\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P3"] = "";
                         }
                         if(count($P4A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P4\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P4\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P4"] = "";
                         }
                         if(count($P5A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P5\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P5\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P5"] = "";
                         }
                         if(count($P6A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P6\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P6\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P6"] = "";
                         }
                         if(count($P7A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P7\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P7\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P7"] = "";
                         }
                         if(count($P8A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P8\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P8\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["P8"] = "";
                         }
                         

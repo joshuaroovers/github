@@ -32,14 +32,14 @@
                         <div class = "question">Wat is je slechtste persoonlijke eigenschap?</div>
                         <div class = "question">Wat is het ergste dat je kan overkomen?</div>
                     </div>
-                    <form id = "awnsers" action = "onkunde.php" method = "POST">
-                        <input id = "O1" type = "text" name = "O1">
-                        <input id = "O2" type = "text" name = "O2">
-                        <input id = "O3" type = "text" name = "O3"> 
-                        <input id = "O4" type = "text" name = "O4">
-                        <input id = "O5" type = "text" name = "O5">
-                        <input id = "O6" type = "text" name = "O6">
-                        <input id = "O7" type = "text" name = "O7">
+                    <form id = "awnsers" action = "onkunde.php" method = "POST" autocomplete = "off">
+                        <input id = "O1" type = "text" name = "O1" value = <?php echo($_POST["O1"]) ?>>
+                        <input id = "O2" type = "text" name = "O2" value = <?php echo($_POST["O2"]) ?>>
+                        <input id = "O3" type = "text" name = "O3" value = <?php echo($_POST["O3"]) ?>> 
+                        <input id = "O4" type = "text" name = "O4" value = <?php echo($_POST["O4"]) ?>>
+                        <input id = "O5" type = "text" name = "O5" value = <?php echo($_POST["O5"]) ?>>
+                        <input id = "O6" type = "text" name = "O6" value = <?php echo($_POST["O6"]) ?>>
+                        <input id = "O7" type = "text" name = "O7" value = <?php echo($_POST["O7"]) ?>>
                         <input id = "submit" type = "submit" name = "Osubmit">
                     </form>
                 </div>
@@ -61,37 +61,37 @@
                         
                         if(count($O1A) == 1)
                         {
-                            echo("<script>document.getElementById(\"O1\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"O1\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O1"] = "";
                         }
                         if(count($O2A) == 1)
                         {
-                            echo("<script>document.getElementById(\"O2\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"O2\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O2"] = "";
                         }
                         if(count($O3A) == 1)
                         {
-                            echo("<script>document.getElementById(\"O3\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"O3\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O3"] = "";
                         }
                         if(count($O4A) == 1)
                         {
-                            echo("<script>document.getElementById(\"O4\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"O4\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O4"] = "";
                         }
                         if(count($O5A) == 1)
                         {
-                            echo("<script>document.getElementById(\"O5\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"O5\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O5"] = "";
                         }
                         if(count($O6A) == 1)
                         {
-                            echo("<script>document.getElementById(\"O6\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"O6\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O6"] = "";
                         }
                         if(count($O7A) == 1)
                         {
-                            echo("<script>document.getElementById(\"O7\").style.backgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"O7\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O7"] = "";
                         }
                         
