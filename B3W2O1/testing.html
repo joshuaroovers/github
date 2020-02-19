@@ -7,13 +7,36 @@
 
 
     <body>
+        <img src = "./images/Naamloos.jpg" >
         <div id = "wrapper">
             <div id = "header">
                 <a href = "./paniek.php">Er heerst paniek...</a>
-                <a href = "./onkunde.php">Onkunde</a>
+                <a class = "curentpage"  href = "./onkunde.php">Onkunde</a>
             </div>
             <div id = "content">
-
+                <form id = "form" action = "onkunde.php" method = "POST">
+                    <div class = "title">Onkunde</div>
+                    <div id = "questions">
+                        <div class = "question">Wat zou je graag willen kunnen?</div>
+                        <div class = "question">Net welke persoon kun je goed opschieten?</div>
+                        <div class = "question">Wat is je favorite geteal?</div>
+                        <div class = "question">Wat heb je altijd bij als je op vakantie gaat?</div>
+                        <div class = "question">Wat is je beste persoonlijke eigenschap?</div>
+                        <div class = "question">Wat is je slechtste persoonlijke eigenschap?</div>
+                        <div class = "question">Wat is het ergste dat je kan overkomen?</div>
+                    </div>
+                    <div id = "awnsers">
+                        <input type = "text" name = "O1">
+                        <input type = "text" name = "O2">
+                        <input type = "text" name = "O3"> 
+                        <input type = "text" name = "O4">
+                        <input type = "text" name = "O5">
+                        <input type = "text" name = "O6">
+                        <input type = "text" name = "O7">
+                        <input id = "submit" type = "submit" name = "submit">
+                    </div>
+                </form>
+                 
             </div>
             <div id = "footer">
                 <div id = "footertext">𝕁𝕠𝕤𝕙𝕦𝕒 ℝ𝕠𝕠𝕧𝕖𝕣𝕤 𝟚𝟘𝟚𝟘 ©</div>

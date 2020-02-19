@@ -29,8 +29,17 @@ img
 }
 #content
 {
+    height: fit-content;
     padding: 20px;
     padding-top: 30px;
+    border-left: 4px solid;
+    border-right: 4px solid;
+    border-image: 
+    linear-gradient(
+      to top, 
+      rgb(0, 59, 0), 
+      rgb(21, 100, 21)
+    ) 1 100%;
 }
 #footer
 {
@@ -46,9 +55,43 @@ img
     padding-top: 15px;
 
 }
-
+.title
+{
+    font-weight: 550;
+    font-size: 25px;
+}
 .curentpage
 {
     color: whitesmoke;
     text-decoration: underline;
+}
+#questions
+{
+    margin-right: 200px;
+    margin-top: 25px;
+    width: fit-content;
+    display: inline-block;
+    vertical-align: top;
+}
+.question
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+input
+{
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    width: 250%;
+}
+#submit
+{
+    width: unset;
+}
+#awnsers
+{   
+    margin-top: 25px;
+    width: fit-content;
+    display: inline-block;
 }
