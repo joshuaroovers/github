@@ -11,8 +11,9 @@
         <?php
 
             ini_set('display_errors', 0);
-
+            
         ?>
+        
 
         <img src = "./images/Naamloos.png" >
         <div id = "wrapper">
@@ -46,8 +47,8 @@
                     </form>
                 </div>
 
+
                 <?php
-                
                     $P1A = str_split($_POST["P1"]);
                     $P2A = str_split($_POST["P2"]);
                     $P3A = str_split($_POST["P3"]);
@@ -56,53 +57,54 @@
                     $P6A = str_split($_POST["P6"]);
                     $P7A = str_split($_POST["P7"]);
                     $P8A = str_split($_POST["P8"]);
-                
+
                     if(isset($_POST["Psubmit"]))
                     {
                         
                         
                         if(count($P1A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P1\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P1\").style.backgroundColor =\"red\"</script>");
                             $_POST["P1"] = "";
                         }
                         if(count($P2A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P2\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P2\").style.backgroundColor =\"red\"</script>");
                             $_POST["P2"] = "";
                         }
                         if(count($P3A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P3\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P3\").style.backgroundColor =\"red\"</script>");
                             $_POST["P3"] = "";
                         }
                         if(count($P4A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P4\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P4\").style.backgroundColor =\"red\"</script>");
                             $_POST["P4"] = "";
                         }
                         if(count($P5A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P5\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P5\").style.backgroundColor =\"red\"</script>");
                             $_POST["P5"] = "";
                         }
                         if(count($P6A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P6\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P6\").style.backgroundColor =\"red\"</script>");
                             $_POST["P6"] = "";
                         }
                         if(count($P7A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P7\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P7\").style.backgroundColor =\"red\"</script>");
                             $_POST["P7"] = "";
                         }
                         if(count($P8A) == 1)
                         {
-                            echo("<script>document.getElementById(\"P8\").style.BackgroundColor =\"red\"</script>");
+                            echo("<script>document.getElementById(\"P8\").style.backgroundColor =\"red\"</script>");
                             $_POST["P8"] = "";
                         }
                         
-                    }
+                    }                             
+                   
                     if(count($P1A) != 1 && count($P2A) != 1 && count($P3A) != 1 && count($P4A) != 1 && count($P5A) != 1 && count($P6A) != 1 && count($P7A) != 1 && count($P8A) != 1)
                     {
                         echo("<script>document.getElementById(\"form\").remove()</script>");

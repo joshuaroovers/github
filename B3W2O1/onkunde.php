@@ -33,76 +33,79 @@
                         <div class = "question">Wat is het ergste dat je kan overkomen?</div>
                     </div>
                     <form id = "awnsers" action = "onkunde.php" method = "POST">
-                        <input type = "text" name = "O1">
-                        <input type = "text" name = "O2">
-                        <input type = "text" name = "O3"> 
-                        <input type = "text" name = "O4">
-                        <input type = "text" name = "O5">
-                        <input type = "text" name = "O6">
-                        <input type = "text" name = "O7">
+                        <input id = "O1" type = "text" name = "O1">
+                        <input id = "O2" type = "text" name = "O2">
+                        <input id = "O3" type = "text" name = "O3"> 
+                        <input id = "O4" type = "text" name = "O4">
+                        <input id = "O5" type = "text" name = "O5">
+                        <input id = "O6" type = "text" name = "O6">
+                        <input id = "O7" type = "text" name = "O7">
                         <input id = "submit" type = "submit" name = "Osubmit">
                     </form>
                 </div>
 
                 <?php
-                
-                $O1A = str_split($_POST["O1"]);
-                $O2A = str_split($_POST["O2"]);
-                $O3A = str_split($_POST["O3"]);
-                $O4A = str_split($_POST["O4"]);
-                $O5A = str_split($_POST["O5"]);
-                $O6A = str_split($_POST["O6"]);
-                $O7A = str_split($_POST["O7"]);
-            
-                if(isset($_POST["Osubmit"]))
-                {
-                    
-                    
-                    if(count($O1A) == 1)
+
+
+                                    
+                    $O1A = str_split($_POST["O1"]);
+                    $O2A = str_split($_POST["O2"]);
+                    $O3A = str_split($_POST["O3"]);
+                    $O4A = str_split($_POST["O4"]);
+                    $O5A = str_split($_POST["O5"]);
+                    $O6A = str_split($_POST["O6"]);
+                    $O7A = str_split($_POST["O7"]);
+
+                    if(isset($_POST["Osubmit"]))
                     {
-                        echo("<script>document.getElementById(\"O1\").style.BackgroundColor =\"red\"</script>");
-                        $_POST["O1"] = "";
+                        
+                        if(count($O1A) == 1)
+                        {
+                            echo("<script>document.getElementById(\"O1\").style.backgroundColor =\"red\"</script>");
+                            $_POST["O1"] = "";
+                        }
+                        if(count($O2A) == 1)
+                        {
+                            echo("<script>document.getElementById(\"O2\").style.backgroundColor =\"red\"</script>");
+                            $_POST["O2"] = "";
+                        }
+                        if(count($O3A) == 1)
+                        {
+                            echo("<script>document.getElementById(\"O3\").style.backgroundColor =\"red\"</script>");
+                            $_POST["O3"] = "";
+                        }
+                        if(count($O4A) == 1)
+                        {
+                            echo("<script>document.getElementById(\"O4\").style.backgroundColor =\"red\"</script>");
+                            $_POST["O4"] = "";
+                        }
+                        if(count($O5A) == 1)
+                        {
+                            echo("<script>document.getElementById(\"O5\").style.backgroundColor =\"red\"</script>");
+                            $_POST["O5"] = "";
+                        }
+                        if(count($O6A) == 1)
+                        {
+                            echo("<script>document.getElementById(\"O6\").style.backgroundColor =\"red\"</script>");
+                            $_POST["O6"] = "";
+                        }
+                        if(count($O7A) == 1)
+                        {
+                            echo("<script>document.getElementById(\"O7\").style.backgroundColor =\"red\"</script>");
+                            $_POST["O7"] = "";
+                        }
+                        
                     }
-                    if(count($O2A) == 1)
+
+
+                    if(count($O1A) != 1 && count($O2A) != 1 && count($O3A) != 1 && count($O4A) != 1 && count($O5A) != 1 && count($O6A) != 1 && count($O7A) != 1 && count($P8A) != 1)
                     {
-                        echo("<script>document.getElementById(\"O2\").style.BackgroundColor =\"red\"</script>");
-                        $_POST["O2"] = "";
+                        echo("<script>document.getElementById(\"form\").remove()</script>");
+                        echo("Er zijn veel mensen die niet kunnen " . $_POST["O1"] . ". Neem nou ". $_POST["O2"]. ". Zelfs met de hulp van een " . $_POST["O4"] . " of zelfs " . $_POST["O3"] . " kan " . $_POST["O2"] . " niet " . $_POST["O1"] . ".");
+                        echo("Dat heeft niet te maken met een gebrek aan " . $_POST["O5"] . ", maar met een te veel aan " . $_POST["O6"] . ". Te veel " . $_POST["O6"] . " leidt tot een " . $_POST["O7"] . " en dat is niet goed als je wilt " . $_POST["O1"] . ". Helaas voor " . $_POST["O2"]);
                     }
-                    if(count($O3A) == 1)
-                    {
-                        echo("<script>document.getElementById(\"O3\").style.BackgroundColor =\"red\"</script>");
-                        $_POST["O3"] = "";
-                    }
-                    if(count($O4A) == 1)
-                    {
-                        echo("<script>document.getElementById(\"O4\").style.BackgroundColor =\"red\"</script>");
-                        $_POST["O4"] = "";
-                    }
-                    if(count($O5A) == 1)
-                    {
-                        echo("<script>document.getElementById(\"O5\").style.BackgroundColor =\"red\"</script>");
-                        $_POST["O5"] = "";
-                    }
-                    if(count($O6A) == 1)
-                    {
-                        echo("<script>document.getElementById(\"O6\").style.BackgroundColor =\"red\"</script>");
-                        $_POST["O6"] = "";
-                    }
-                    if(count($O7A) == 1)
-                    {
-                        echo("<script>document.getElementById(\"O7\").style.BackgroundColor =\"red\"</script>");
-                        $_POST["O7"] = "";
-                    }
-                    
-                }
-                if(count($O1A) != 1 && count($O2A) != 1 && count($O3A) != 1 && count($O4A) != 1 && count($O5A) != 1 && count($O6A) != 1 && count($O7A) != 1 && count($P8A) != 1)
-                {
-                    echo("<script>document.getElementById(\"form\").remove()</script>");
-                    echo("Er zijn veel mensen die niet kunnen " . $_POST["O1"] . ". Neem nou ". $_POST["O2"]. ". Zelfs met de hulp van een " . $_POST["O4"] . " of zelfs " . $_POST["O3"] . " kan " . $_POST["O2"] . " niet " . $_POST["O1"] . ".");
-                    echo("Dat heeft niet te maken met een gebrek aan " . $_POST["O5"] . ", maar met een te veel aan " . $_POST["O6"] . ". Te veel " . $_POST["O6"] . " leidt tot een " . $_POST["O7"] . " en dat is niet goed als je wilt " . $_POST["O1"] . ". Helaas voor " . $_POST["O2"]);
-                }
                 ?>
-                 
+
             </div>
             <div id = "footer">
                 <div id = "footertext">𝕁𝕠𝕤𝕙𝕦𝕒 ℝ𝕠𝕠𝕧𝕖𝕣𝕤 𝟚𝟘𝟚𝟘 ©</div>
