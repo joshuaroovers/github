@@ -25,21 +25,21 @@
                     <div class = "title">Onkunde</div>
                     <div id = "questions">
                         <div class = "question">Wat zou je graag willen kunnen?</div>
-                        <div class = "question">Net welke persoon kun je goed opschieten?</div>
-                        <div class = "question">Wat is je favorite geteal?</div>
+                        <div class = "question">Met welke persoon kun je goed opschieten?</div>
+                        <div class = "question">Wat is je favorite getal?</div>
                         <div class = "question">Wat heb je altijd bij als je op vakantie gaat?</div>
                         <div class = "question">Wat is je beste persoonlijke eigenschap?</div>
                         <div class = "question">Wat is je slechtste persoonlijke eigenschap?</div>
                         <div class = "question">Wat is het ergste dat je kan overkomen?</div>
                     </div>
                     <form id = "awnsers" action = "onkunde.php" method = "POST" autocomplete = "off">
-                        <input id = "O1" type = "text" name = "O1" value = <?php echo($_POST["O1"]) ?>>
-                        <input id = "O2" type = "text" name = "O2" value = <?php echo($_POST["O2"]) ?>>
-                        <input id = "O3" type = "text" name = "O3" value = <?php echo($_POST["O3"]) ?>> 
-                        <input id = "O4" type = "text" name = "O4" value = <?php echo($_POST["O4"]) ?>>
-                        <input id = "O5" type = "text" name = "O5" value = <?php echo($_POST["O5"]) ?>>
-                        <input id = "O6" type = "text" name = "O6" value = <?php echo($_POST["O6"]) ?>>
-                        <input id = "O7" type = "text" name = "O7" value = <?php echo($_POST["O7"]) ?>>
+                        <input id = "O1" type = "text" name = "O1" value = <?php echo($O1A) ?>>
+                        <input id = "O2" type = "text" name = "O2" value = <?php echo($O2A) ?>>
+                        <input id = "O3" type = "text" name = "O3" value = <?php echo($O3A) ?>> 
+                        <input id = "O4" type = "text" name = "O4" value = <?php echo($O4A) ?>>
+                        <input id = "O5" type = "text" name = "O5" value = <?php echo($O5A) ?>>
+                        <input id = "O6" type = "text" name = "O6" value = <?php echo($O6A) ?>>
+                        <input id = "O7" type = "text" name = "O7" value = <?php echo($O7A) ?>>
                         <input id = "submit" type = "submit" name = "Osubmit">
                     </form>
                 </div>
@@ -48,48 +48,50 @@
 
 
                                     
-                    $O1A = str_split($_POST["O1"]);
-                    $O2A = str_split($_POST["O2"]);
-                    $O3A = str_split($_POST["O3"]);
-                    $O4A = str_split($_POST["O4"]);
-                    $O5A = str_split($_POST["O5"]);
-                    $O6A = str_split($_POST["O6"]);
-                    $O7A = str_split($_POST["O7"]);
+                    $O1A = htmlspecialchars($_POST["O1"]);
+                    $O2A = htmlspecialchars($_POST["O2"]);
+                    $O3A = htmlspecialchars($_POST["O3"]);
+                    $O4A = htmlspecialchars($_POST["O4"]);
+                    $O5A = htmlspecialchars($_POST["O5"]);
+                    $O6A = htmlspecialchars($_POST["O6"]);
+                    $O7A = htmlspecialchars($_POST["O7"]);
+
+
 
                     if(isset($_POST["Osubmit"]))
                     {
                         
-                        if(count($O1A) == 1)
+                        if(empty($O1A))
                         {
                             echo("<script>document.getElementById(\"O1\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O1"] = "";
                         }
-                        if(count($O2A) == 1)
+                        if(empty($O2A))
                         {
                             echo("<script>document.getElementById(\"O2\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O2"] = "";
                         }
-                        if(count($O3A) == 1)
+                        if(empty($O3A))
                         {
                             echo("<script>document.getElementById(\"O3\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O3"] = "";
                         }
-                        if(count($O4A) == 1)
+                        if(empty($O4A))
                         {
                             echo("<script>document.getElementById(\"O4\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O4"] = "";
                         }
-                        if(count($O5A) == 1)
+                        if(empty($O5A))
                         {
                             echo("<script>document.getElementById(\"O5\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O5"] = "";
                         }
-                        if(count($O6A) == 1)
+                        if(empty($O6A))
                         {
                             echo("<script>document.getElementById(\"O6\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O6"] = "";
                         }
-                        if(count($O7A) == 1)
+                        if(empty($O7A))
                         {
                             echo("<script>document.getElementById(\"O7\").style.backgroundColor =\"rgba(255, 78, 46, 0.685)\"</script>");
                             $_POST["O7"] = "";
@@ -98,12 +100,14 @@
                     }
 
 
-                    if(count($O1A) != 1 && count($O2A) != 1 && count($O3A) != 1 && count($O4A) != 1 && count($O5A) != 1 && count($O6A) != 1 && count($O7A) != 1 && count($P8A) != 1)
+                    if(!empty($O1A) && !empty($O2A) && !empty($O3A) && !empty($O4A) && !empty($O5A) && !empty($O6A) && !empty($O7A))
                     {
                         echo("<script>document.getElementById(\"form\").remove()</script>");
-                        echo("Er zijn veel mensen die niet kunnen " . $_POST["O1"] . ". Neem nou ". $_POST["O2"]. ". Zelfs met de hulp van een " . $_POST["O4"] . " of zelfs " . $_POST["O3"] . " kan " . $_POST["O2"] . " niet " . $_POST["O1"] . ".");
-                        echo("Dat heeft niet te maken met een gebrek aan " . $_POST["O5"] . ", maar met een te veel aan " . $_POST["O6"] . ". Te veel " . $_POST["O6"] . " leidt tot een " . $_POST["O7"] . " en dat is niet goed als je wilt " . $_POST["O1"] . ". Helaas voor " . $_POST["O2"]);
+                        echo("Er zijn veel mensen die niet kunnen " . $O1A . ". Neem nou ". $O2A. ". Zelfs met de hulp van een " . $O4A . " of zelfs " . $O3A . " kan " . $O2A . " niet " . $O1A . ".");
+                        echo(" Dat heeft niet te maken met een gebrek aan " . $O5A . ", maar met een te veel aan " . $O6A . ". Te veel " . $O6A . " leidt tot een " . $O7A . " en dat is niet goed als je wilt " . $O1A . ". Helaas voor " . $O2A);
                     }
+
+                   
                 ?>
 
             </div>
