@@ -3,14 +3,14 @@
 
 
 
-function query($queryx)
-{
-    $sql = new PDO("mysql:host=localhost;dbname=characterdata", 'root', '');
-    $stmt = $sql->prepare($queryx);
-    $stmt->execute(); 
-    $var = $stmt->fetchcolumn(); 
-    return $var;
-}
+    function query($queryx)
+    {
+        $sql = new PDO("mysql:host=localhost;dbname=characterdata", 'root', '');
+        $stmt = $sql->prepare($queryx);
+        $stmt->execute(); 
+        $var = $stmt->fetchcolumn(); 
+        return $var;
+    }
 
 
     $sql = new PDO("mysql:host=localhost;dbname=characterdata", 'root', '');
@@ -122,10 +122,7 @@ function query($queryx)
 
 <?php
 
-/* if($_POST['action'] == 'call_this')
-{
-    echo("<script>document.getElementBytype(\"form\");  document.createElement(div).id = \"wrapper\"; document.body.appendChild(\"wrapper\");</script>");
-} */
+
 ?>
 
 
