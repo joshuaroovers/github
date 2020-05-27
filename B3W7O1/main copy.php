@@ -9,6 +9,12 @@
     $stmt->execute();
     $imagecount = $stmt->fetchcolumn();
     
+
+    for($x = 0; $x < $imagecount; $x++)
+    {
+        $gameneeded[$x] = false;
+    }
+    
     
 ?>
 
@@ -40,9 +46,19 @@
                     {
                         $images[$x] = $database[0][$x]["image"];
                     }
-
+                    $y = 0;
+                    $gameneeded[12] = true;/*  */
                     foreach ($images as $b) {
-                        echo("<img src=\"./afbeeldingen/".$b."\">");
+
+                        if($gameneeded[$y] === true)/*  */
+                        {
+                           echo("<img class = \"gameneeded\" src=\"./afbeeldingen/".$b."\">");
+                        }
+                        else 
+                        {
+                            echo("<img src=\"./afbeeldingen/".$b."\">");
+                        }
+                        $y++;
                     }
                 ?>
             </div>
