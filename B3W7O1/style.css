@@ -1,0 +1,28 @@
+body
+{
+    background-color: lightslategrey;
+}
+#wrapper
+{
+    background-color: whitesmoke;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 15px;
+
+    border: solid 2px rgb(82, 82, 82);
+}
+img
+{
+    width: 18%;
+    height: auto;
+    margin: 1%;
+}
+li
+{
+    list-style: none;
+}
+.nav
+{
+    margin-bottom: 20px;
+    border-bottom: solid 2px rgb(82, 82, 82);
+}
