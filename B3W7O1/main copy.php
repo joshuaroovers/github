@@ -52,11 +52,11 @@
 
                         if($gameneeded[$y] === true)/*  */
                         {
-                           echo("<img class = \"gameneeded\" src=\"./afbeeldingen/".$b."\">");
+                           echo("<img class = \"game, gameneeded\" src=\"./afbeeldingen/".$b."\">");
                         }
                         else 
                         {
-                            echo("<img src=\"./afbeeldingen/".$b."\">");
+                            echo("<img class = \"game\" src=\"./afbeeldingen/".$b."\">");
                         }
                         $y++;
                     }

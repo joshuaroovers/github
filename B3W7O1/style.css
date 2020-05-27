@@ -15,10 +15,10 @@ body
 {
     border: rgb(57, 196, 44) 2px solid;
 }      
-img
+.game
 {
     width: 18%;
-    height: auto;         /* THIS WONT UPDATE */
+             /* THIS WONT UPDATE */
     margin: 1%;
     border: rgb(196, 44, 44) 2px solid;
 }

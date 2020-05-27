@@ -1,0 +1,7 @@
+https://www.w3schools.com/howto/howto_js_element_iframe.asp
+
+https://www.w3schools.com/howto/howto_js_popup.asp
+https://www.w3schools.com/howto/howto_css_tooltip.asp
+
+https://www.w3schools.com/howto/howto_css_modals.asp
+https://www.w3schools.com/howto/howto_css_overlay.asp
