@@ -33,11 +33,11 @@
                 <li class = "nav-item"><a class = "nav-link"><i class="fas fa-chevron-left"></i></a></li>
                 <li class = "nav-item"><a class = "nav-link">pagina 1</a></li>
                 <li class = "nav-item"><a class = "nav-link">pagina 2</a></li>
-                <!-- <i class="fas fa-chevron-left"></i> -->
+
             </ul>
             <div>
-                <span><i class="far fa-square"></i></span>
-                <span><i class="far fa-square"></i></span>
+                <span><i class="green fa-2x far fa-square"></i> This game is going to be played</span>
+                <span><i class="red fa-2x far fa-square"></i> Nobody is playing this game</span>
             </div>
             <div>
                 <?php
@@ -47,12 +47,15 @@
                         $images[$x] = $database[0][$x]["image"];
                     }
                     $y = 0;
-                    $gameneeded[12] = true;/*  */
+                    $gameneeded[12] = true;
+                    $gameneeded[24] = true;
+                    $gameneeded[1] = true;
+                    $gameneeded[5] = true;
                     foreach ($images as $b) {
 
-                        if($gameneeded[$y] === true)/*  */
+                        if($gameneeded[$y] === true)
                         {
-                           echo("<img class = \"game, gameneeded\" src=\"./afbeeldingen/".$b."\">");
+                           echo("<img class = \"game gameneeded\" src=\"./afbeeldingen/".$b."\">");
                         }
                         else 
                         {

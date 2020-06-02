@@ -11,10 +11,7 @@ body
 
     border: solid 2px rgb(82, 82, 82);
 }
-.gameneeded
-{
-    border: rgb(57, 196, 44) 2px solid;
-}      
+     
 .game
 {
     width: 18%;
@@ -22,6 +19,22 @@ body
     margin: 1%;
     border: rgb(196, 44, 44) 2px solid;
 }
+.gameneeded
+{
+    border: rgb(57, 196, 44) 2px solid;
+} 
+
+.green
+{
+    margin-left: 20px;
+    color: rgb(57, 196, 44);
+}
+.red
+{
+    margin-left: 20px;
+    color: rgb(196, 44, 44);
+}
+
 li
 {
     list-style: none;
