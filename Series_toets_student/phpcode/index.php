@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <?php include 'htmlcomponents/connection.php' ?>
+    <?php include 'connection.php' ?>
 </head>
 <body>
 
@@ -22,7 +22,7 @@
 
     <?php
 
-
+    echo("<form action = \"character.php\" method = \"POST\">");
     for($x = 0; $x < $count; $x++)
     {
         echo(
@@ -34,14 +34,14 @@
                         <p class=\"card-text\">
                             ".$datachar[0][$x]["description"]."
                         </p>
-                        <a href=\"character.php\" class=\"btn btn-primary\">Meer details</a>
+                        <input class=\"btn btn-primary\"value = \"Meer details\" type = \"submit\" name = \"".$datachar[0][$x]["id"]."info\">
                     </div>
                 </div>
             </div>
             "
         );
     }
-
+    echo("</form>")
     
 
     ?>
