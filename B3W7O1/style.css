@@ -12,17 +12,40 @@ body
     border: solid 2px rgb(82, 82, 82);
 }
      
-.game
+.gameimgsize
 {
-    width: 18%;
+    width: 100%;
+    display: block;
              /* THIS WONT UPDATE */
+}
+.gamecontainer
+{
+    width: 17.5%;
     margin: 1%;
-    border: rgb(196, 44, 44) 2px solid;
+    display: inline-block;
 }
 .gameneeded
 {
     border: rgb(57, 196, 44) 2px solid;
 } 
+.gamenotneeded
+{
+    border: rgb(196, 44, 44) 2px solid;
+}
+
+.overlay
+{
+    width: 12%;
+    height: 25.2%;
+    background-color: rgba(30, 30, 30, 0.5);
+    position: absolute;
+    display: none;
+}
+
+.gamecontainer:hover .overlay
+{
+    display: block;
+}
 
 .green
 {
@@ -43,4 +66,9 @@ li
 {
     margin-bottom: 20px;
     border-bottom: solid 2px rgb(82, 82, 82);
+}
+
+.fac-size
+{
+    font-size: 200%;
 }
